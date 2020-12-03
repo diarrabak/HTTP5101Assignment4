@@ -1,0 +1,52 @@
+﻿@model  Assignment4_B_Diarra.Models.Teacher
+@{
+    ViewBag.Title = "Show";
+}
+<h2 id="return-to-list"><a href="/Teacher/List">Back to teacher list</a></h2>
+
+<form action="/Teacher/removeTeacher/@Model.employeeNumber" method="POST" onclick="confirmation();" name="deleteTeacher" id="delete">
+    <input type="submit" value="Delete teacher" />
+</form>
+
+@if (@Model.employeeNumber != "Unknown" && @Model.employeeNumber != " ")
+{
+    <h2>The teacher with Employee ID @Model.employeeNumber is </h2>
+    <ul>
+        <li>First and last names: @Model.firstName @Model.surName </li>
+        <li>Hire date      : @Model.hireDate</li>
+        <li>Employee Number: @Model.employeeNumber</li>
+        <li>Salary         : @Model.salary</li>
+
+    </ul>
+}
+else
+{
+    <h2>This teacher does not exist in the database.</h2>
+}
+@if (Model.modulesTaught.Count != 0)
+{
+    string classe ="module";
+    if (Model.modulesTaught.Count > 1) {
+        classe = "modules";
+    }
+
+<h2> @Model.firstName @Model.surName teaches @Model.modulesTaught.Count @classe</h2>
+    <ul>
+        @foreach (var module in Model.modulesTaught)
+        {
+            <li> Module code: @module.classCode 
+                <ul>
+                    <li>Module name: @module.className </li>
+                    <li>Starting on: @module.startDate </li>
+                    <li>Finishing on: @module.finishDate </li>
+                </ul>
+        </li>
+        }
+
+    </ul>
+}
+else
+{
+    <h2> @Model.firstName @Model.surName has no teaching this semester!!</h2>
+}
+

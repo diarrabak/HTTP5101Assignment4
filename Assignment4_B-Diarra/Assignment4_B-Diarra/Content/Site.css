@@ -1,0 +1,127 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content,.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width:1000px;
+    border:2px dashed red;
+    margin: 0 auto;
+    text-align:center;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 480px;
+}
+body h2{
+    color: darkorchid;
+}
+.body-content ol{
+    margin:0 auto;
+    text-align:left;
+    margin-left:30%;
+    
+}
+.body-content ol ul{
+    margin-left:0;
+}
+    .body-content ol li ul {
+        padding-left:20px;
+        display: none;
+    }
+    .body-content ol li:hover ul {
+        display: block;
+    }
+
+.body-content ol > li {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color:blue;
+        font-size:16px;
+ }
+
+    .body-content ul, form {
+        text-align:left;
+        margin-left:20%;
+    }
+    form{
+        margin-top:20px;
+    }
+    ul li ul li{
+        margin-left:-120px;
+    }
+ul li ul {
+    margin-left: 0;
+    display: none;
+}
+li:hover ul{
+    display:block;
+}
+#return-to-list{
+    position:relative;
+    right:35%;
+    font-size:1.5em;
+}
+#delete{
+    position: relative;
+    left: 35%;
+    top:-30px;
+    font-size: 1.5em;
+}
+#delete a{
+    color: red;
+}
+
+#hiredate{
+    margin-left:63px;
+}
+#salary {
+    margin-left: 84px;
+}
+input[value="Addteacher"]{
+    border-radius:10px 10px;
+    color:white;
+    background-color:blue;
+    height:40px;
+    width:120px;
+    font-size:1.25em;
+}
+    input[value="Addteacher"]:hover {
+        color:red;
+        background-color: lightgreen;
+        border:2px blue solid;
+    }
+
+input[value="Delete teacher"] {
+    border-radius: 10px 10px;
+    color: red;
+    background-color: blue;
+    height: 40px;
+    width: 200px;
+    font-size: 1.25em;
+}
+
+    input[value="Delete teacher"]:hover {
+        color: white;
+        background-color: red;
+    }
+#newteacher {
+    position:relative;
+    top:-45px;
+    margin-left:500px;
+}
+#newteacher a {
+    text-decoration:none;
+    color: deeppink;
+    font-size:1em;
+}
+    #newteacher a:hover {
+        text-decoration: underline;
+    }

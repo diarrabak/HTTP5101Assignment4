@@ -1,0 +1,24 @@
+﻿@model  IEnumerable<Assignment4_B_Diarra.Models.ClassModule>
+
+@{
+    ViewBag.Title = "classList";
+}
+
+<h2>List of the @Model.Count() classes from the database</h2>
+<ol>
+    @foreach (var item in Model)
+    {
+        <li>
+            Module code @item.classCode
+            <ul>
+                <li>Module name    : @item.className</li>
+                <li>Starts on      : @item.startDate</li>
+                <li>Finishes on: @item.finishDate</li>
+
+            </ul>
+        </li>
+    }
+</ol>
+
+
+

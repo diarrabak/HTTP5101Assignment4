@@ -1,0 +1,27 @@
+﻿@model  IEnumerable<Assignment4_B_Diarra.Models.Teacher>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List of the @Model.Count() teachers from the database</h2>
+
+
+<form action="/Teacher/List" method="GET">
+    <input type="text" name="keyword" />
+    <input type="submit" value="Find teacher" />
+</form>
+
+<h3 id="newteacher"><a href="/Teacher/NewTeacher">Add a new teacher</a></h3>
+
+<ol>
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="/Teacher/Show/@item.employeeNumber"> @item.firstName  @item.surName</a>
+
+        </li>
+    }
+</ol>
+
+
