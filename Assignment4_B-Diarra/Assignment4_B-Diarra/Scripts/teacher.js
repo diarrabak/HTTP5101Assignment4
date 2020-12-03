@@ -15,7 +15,7 @@ function AddTeacher() {
 	// is the method GET or POST?
 	// what should we do with the response?
 
-	var teacherForm = document.forms.newteacher;
+	var teacherForm = document.forms.newTeacher;
 	var teacherFname = teacherForm.fname.value;
 	var teacherLname = teacherForm.lname.value;
 	var teacherEmpId = teacherForm.employeenumber.value;

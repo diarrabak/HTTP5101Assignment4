@@ -158,7 +158,7 @@ namespace Assignment4_B_Diarra.Controllers
             {
                 fname = "Unknown";
             }
-            if (employeenumber.Length !=4 ||!employeenumber[0].Equals("T") ||employeenumber==null)
+            if (employeenumber.Length !=4 ||employeenumber==null)
             {
                 employeenumber = "Unknown";
             }
