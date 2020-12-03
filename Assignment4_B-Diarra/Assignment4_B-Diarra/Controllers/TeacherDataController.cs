@@ -149,6 +149,27 @@ namespace Assignment4_B_Diarra.Controllers
         [EnableCors(origins: "*", methods: "*", headers: "*")]
         public void AddNewTeacher([FromBody] string fname, string lname,string employeenumber, DateTime hireDate, decimal salary)
         {
+            //Inputs validation before saving in database
+            if (fname == ""|| fname==null)
+            {
+                fname = "Unknown";
+            }
+            if (lname == "" || lname==null)
+            {
+                fname = "Unknown";
+            }
+            if (employeenumber.Length !=4 ||!employeenumber[0].Equals("T") ||employeenumber==null)
+            {
+                employeenumber = "Unknown";
+            }
+            if(salary<0 || salary > 900000 ||salary.Equals(null))
+            {
+                salary = 0;
+            }
+            if (hireDate==null)
+            {
+                hireDate = DateTime.Now;
+            }
             //Create an instance of a connection
             MySqlConnection Conn = School.AccessDatabase();
 

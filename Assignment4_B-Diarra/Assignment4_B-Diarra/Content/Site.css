@@ -117,11 +117,16 @@ input[value="Delete teacher"] {
     top:-45px;
     margin-left:500px;
 }
-#newteacher a {
-    text-decoration:none;
-    color: deeppink;
-    font-size:1em;
+#newteacherAjax{
+    position: relative;
+    top: -25px;
+    margin-left: 550px;
 }
-    #newteacher a:hover {
+#newteacher a, #newteacherAjax a {
+    text-decoration: none;
+    color: deeppink;
+    font-size: 1em;
+}
+    #newteacher a:hover, #newteacherAjax a:hover {
         text-decoration: underline;
     }
